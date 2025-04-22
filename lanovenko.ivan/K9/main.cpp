@@ -391,4 +391,3 @@ int main()
   }
   clearTriTree(&root);
 }
-
