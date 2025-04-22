@@ -210,6 +210,10 @@ void insert(TriTree< T, Cmp >* root, TriTree< T, Cmp >* node, Cmp cmp)
 template< class T, class Cmp >
 TriTree< T, Cmp >* convert(const std::pair< T, T >* data, size_t n, Cmp cmp)
 {
+  if(n == 0)
+  {
+    return nullptr;
+  }
   TriTree< T, Cmp >* root = new TriTree< T, Cmp >{ data[0], nullptr, nullptr, nullptr, nullptr };
   try
   {
