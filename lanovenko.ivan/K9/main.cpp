@@ -93,11 +93,7 @@ bool TriTreeIterator< T, Cmp >::is_left(this_t root) const
 template< class T, class Cmp >
 bool TriTreeIterator< T, Cmp >::hasNext() const
 {
-  if (!node_)
-  {
-    return false;
-  }
-  return true;
+  return !node_ ? false : true;
 }
 
 template< class T, class Cmp >
@@ -210,7 +206,7 @@ void insert(TriTree< T, Cmp >* root, TriTree< T, Cmp >* node, Cmp cmp)
 template< class T, class Cmp >
 TriTree< T, Cmp >* convert(const std::pair< T, T >* data, size_t n, Cmp cmp)
 {
-  if(n == 0)
+  if (n == 0)
   {
     return nullptr;
   }
